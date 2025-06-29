@@ -141,10 +141,11 @@
         .slideshow-container {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 450px;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
         }
 
         .slide {
@@ -176,10 +177,82 @@
             font-weight: 700;
         }
 
+        #typed-text-container {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+            display: block;
+            white-space: normal;         /* allow wrapping */
+            word-wrap: break-word;       /* break long words if needed */
+            overflow-wrap: break-word;
+            min-height: 3.6em;           /* reserve height to avoid layout shift */
+            position: relative;
+        }
+
+        #cursor {
+            display: inline-block;
+            color: #666;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
             line-height: 1.8;
+        }
+
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background-color: #191756;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #87CEEB;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         /* Services Section */
@@ -275,6 +348,32 @@
             overflow: hidden;
         }
 
+        .more-info-alt {
+            background: #191756;
+        }
+
+        .more-info-alt .section-title,
+        .more-info-alt .section-subtitle,
+        .more-info-alt .info-title,
+        .more-info-alt .info-description,
+        .more-info-alt .highlight-item {
+            color: white;
+        }
+
+        .more-info-alt .info-subtitle {
+            color: #87CEEB;
+        }
+
+        .more-info-alt .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-color: rgba(135, 206, 235, 0.3);
+        }
+
+        .more-info-alt .info-header {
+            border-color: rgba(135, 206, 235, 0.3);
+        }
+
         .more-info::before {
             content: '';
             position: absolute;
@@ -284,8 +383,6 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, #87CEEB, transparent);
         }
-        
-
 
         .info-grid {
             display: flex;
@@ -294,24 +391,24 @@
             align-items: center;
         }
 
-     
         .info-card {
             width: 70%;
             background: white;
             border-radius: 15px;
             padding: 0;
-            box-shadow: 0 8px 30px rgba(25, 23, 86, 0.08);
+            box-shadow: 0 10px 30px rgba(25, 23, 86, 0.1);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
-            border: 2px solid rgba(108, 176, 203, 0.696);
+            border: 2px solid rgba(108, 176, 203, 0.3);
             margin-bottom: 1.2rem;
+            cursor: pointer;
         }
 
         .info-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(25, 23, 86, 0.15);
-            border-color: rgba(49, 121, 149, 0.775);
+            box-shadow: 0 20px 50px rgba(25, 23, 86, 0.2);
+            border-color: rgba(49, 121, 149, 0.5);
         }
 
         .info-card::before {
@@ -324,16 +421,15 @@
         }
 
         .info-header {
-            padding: 30px 30px 20px 30px;
-            background: linear-gradient(135deg, rgba(200, 232, 245, 0.03) 0%, rgba(253, 254, 255, 0.03) 100%);
-            border-bottom: 1px solid rgba(108, 176, 203, 0.696);
+            padding: 25px 30px;
+            background: linear-gradient(135deg, rgba(200, 232, 245, 0.05) 0%, rgba(253, 254, 255, 0.05) 100%);
+            border-bottom: 1px solid rgba(108, 176, 203, 0.3);
             position: relative;
             display: flex;               
             align-items: center;    
             gap: 20px;               
-            flex-wrap: wrap; 
+            flex-wrap: nowrap;
         }
-
 
         .info-icon {
             width: 50px;
@@ -343,10 +439,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
             font-size: 24px;
             color: white;
-            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+            box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3);
+            flex-shrink: 0;
         }
 
         .info-title {
@@ -355,17 +451,17 @@
             color: #191756;
             margin-bottom: 8px;
             line-height: 1.3;
+            flex: 1;
+            min-width: 0;
         }
 
         .info-subtitle {
             font-size: 0.95rem;
             color: #87CEEB;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            width: 100%;  
-                         
-        
+            width: 100%;                          
         }
         
         .info-content {
@@ -376,21 +472,21 @@
             margin-bottom: 0;
             transition: 
                 max-height 0.5s ease,
-                margin-top 0.5s ease,
-                margin-bottom 0.5s ease;
+                padding 0.5s ease,
+                margin 0.5s ease;
         }
 
-
-
-         .info-card.active .info-content {
-            max-height: 500px; /* or large enough to fit the content */
-
+        .info-card.active .info-content {
+            max-height: 500px;
+            padding: 0 30px 30px;
+            margin-top: 15px;
         }
 
         .info-description {
             color: #666;
             line-height: 1.7;
             font-size: 1rem;
+            margin-bottom: 20px;
         }
 
         .info-highlights {
@@ -407,6 +503,7 @@
             border-right: 8px solid transparent;
             border-top: 8px solid #87CEEB;
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         /* Rotate when parent card is active */
@@ -414,13 +511,12 @@
             transform: rotate(180deg);
         }
 
-
         .highlight-item {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
             color: #555;
         }
 
@@ -486,57 +582,62 @@
         }
 
         .btn-primary {
-            background: #4cb1eb;
-            color: #ffffff;
-            padding: 15px 30px;
-            border: 2px solid rgba(108, 176, 203, 0.696);
-            border: none;
+            display: inline-block;
+            background: linear-gradient(135deg, #4cb1eb, #191756);
+            color: white;
+            padding: 12px 25px;
             border-radius: 50px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
+            transition: all 0.5s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(76, 177, 235, 0.3);
         }
 
         .btn-primary:hover {
-            background: #191756;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(76, 177, 235, 0.4);
+            background: linear-gradient(135deg, #191756, #4cb1eb);
         }
 
-        .btn-primary2 {
-            background: #4cb1eb;
-            color: #ffffff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            border: 2px solid rgba(108, 176, 203, 0.696);
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
+
+        .btn-secondary {
             display: inline-block;
-            margin-top: 30px;
+            background: linear-gradient(135deg, #4cb1eb, #191756);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.5s ease;
+            border: 2px solid rgb(80, 101, 163);
+            cursor: pointer;
+            margin-top: 15px;
         }
 
-        .btn-primary2:hover {
-            background: #191756;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #191756, #4cb1eb);
         }
+
 
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background: white;
+            background: #191756;
             position: relative;
             overflow: hidden;
         }
 
+        .contact-alt {
+            background: white;
+        }
+
+        .contact-alt .section-title {
+            color: #191756;
+        }
 
         .contact::before {
             content: '';
@@ -568,44 +669,63 @@
         .contact-image img {
             max-width: 100%;
             height: auto;
-            border-radius: 15px;
         }
 
         .contact-form {
             flex: 1;
             max-width: 600px;
+            background: #191756;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+
+    
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-        .form-group input {
-            background-color: #f1f1f1;
-        }
-
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #cbcbcb;
-            border-radius: 0px;
+            padding: 15px 20px;
             font-size: 16px;
-            transition: border-color 0.3s ease;
+            border: 2px solid rgba(108, 176, 203, 0.3);
+            border-radius: 15px;
+
+            background: rgba(255, 255, 255, 0.05); /* same as info-card */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px); /* for Safari */
+            
+            color: white;
+            box-shadow: 0 10px 30px rgba(25, 23, 86, 0.1);
+            transition: all 0.3s ease;
         }
 
+        /* Placeholder styling for better glass effect */
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Focus effect similar to info-card hover */
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #87CEEB;
+            border-color: rgba(49, 121, 149, 0.5);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
         }
 
+        /* Keep consistent sizing for textarea */
         .form-group textarea {
-            height: 120px;
-            background-color: #f1f1f1;
+            height: 150px;
             min-height: 55px;
             resize: vertical;
         }
+
 
         /* Partners Section */
         .partners {
@@ -652,6 +772,31 @@
             color: white;
             text-align: center;
             padding: 40px 0;
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #4cb1eb, #191756);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(25, 23, 86, 0.3);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(25, 23, 86, 0.4);
         }
 
         /* Animations */
@@ -755,13 +900,14 @@
 
             .hero-content h1 {
                 font-size: 2rem;
+                color: white;
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.262);
             }
 
-            .hero-content p {
-                font-size: 1rem;
-                color: rgb(212, 212, 212);
-                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.262);
+            #typed-text-container,
+            #typed-text,
+            #cursor {
+                color: #ffffff;
             }
             .section-title {
                 font-size: 2rem;
@@ -839,12 +985,16 @@
                 z-index: 1;
                 width: 100%;
                 padding: 30px;
-                border-radius: 10px;
             }
 
             .instagram-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
+            }
+
+            .partner-logo {
+                height: 50px;
+                margin-bottom: -40px;
             }
 
  
@@ -907,7 +1057,28 @@
             </div>
             <div class="hero-content">
                 <h1>Priemyselné podlahy Žilina</h1>
-                <p>Realizácie priemyselných podláh, leštený betón, liatie základových platní, kompletné betonárske práce a služby.</p>
+                <p id="typed-text-container"><span id="typed-text"></span><span id="cursor">|</span></p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number" id="counter1">1</div>
+                    <div class="stat-text">Spokojných zákazníkov</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number" id="counter2">1</div>
+                    <div class="stat-text">Úspešných projektov</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number" id="counter3">1</div>
+                    <div class="stat-text">Rokov skúsenosti</div>
+                </div>
             </div>
         </div>
     </section>
@@ -939,14 +1110,14 @@
     </section>
 
     <!-- More Info Section - REDESIGNED -->
-    <section id="more-info" class="more-info">
+    <section id="more-info" class="more-info more-info-alt">
         <div class="container">
             <h2 class="section-title fade-in-up">Viac informácií</h2>
             <p class="section-subtitle">Poznajte detaily o našich technológiách a riešeniach pre rôzne typy betónových podláh</p>
             
             <div class="info-grid">
                 <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this)">
+                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
                         <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
                             <h3 class="info-title">Podkladová betónová doska</h3>
@@ -958,11 +1129,12 @@
                         <p class="info-description">
                             Betón zavibrovaný ponornými vibrátormi a vyrovnaný buď ručne alebo vibračnou latou. Môže slúžiť ako základová doska pre ďalšie vrstvy podlahových konštrukcií alebo ako podkladový betón.
                         </p>
+                        <a href="#contact" class="cta-button">Objednať</a>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this)">
+                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
                         <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
                             <h3 class="info-title">Betónová doska</h3>
@@ -974,6 +1146,7 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou. Úprava je vhodná pre epoxidové podlahy, pod podlahy kladené na betónovú dosku a pre podlahy pod ktoré sú kladené nároky na rovinatosť.
                         </p>
+                        <a href="#contact" class="cta-button">Objednať</a>
                     </div>
                 </div>
 
@@ -990,6 +1163,7 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu, vysokými mechanickými odolnosťami a zvýšenými parametrami rovinnosti.
                         </p>
+                        <a href="#contact" class="cta-button">Objednať</a>
                     </div>
                 </div>
 
@@ -1014,6 +1188,7 @@
                             <div class="highlight-item">Nenáročná údržba a jednoduché čistenie</div>
                             <div class="highlight-item">Rýchlosť realizácie v porovnaní s inými možnosťami</div>
                         </div>
+                        <a href="#contact" class="cta-button">Objednať</a>
                     </div>
                 </div>
 
@@ -1036,9 +1211,9 @@
                             <div class="highlight-item">Oolnosť voči mechanickému zaťaženiu</div>
                             <div class="highlight-item">Rýchlosť realizácie</div>
                         </div>
+                        <a href="#contact" class="cta-button">Objednať</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1077,7 +1252,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact contact-alt">
         <div class="container">
             <h2 class="section-title">Kontaktujte nás</h2>
             
@@ -1099,11 +1274,10 @@
                         <textarea id="message" name="message" placeholder="Správa" required></textarea>
                     </div>
                     <div style="text-align: center;">
-                        <button type="submit" class="btn-primary2">Odoslať</button>
+                        <button type="submit" class="btn-secondary">Odoslať</button>
                     </div>
                 </form>
             </div>
-            
         </div>
     </section>
 
@@ -1124,6 +1298,11 @@
             <p>© 2021 Elmip s.r.o. | Všetky práva vyhradené | Informácie o ochrane osobných údajov</p>
         </div>
     </footer>
+
+    
+    <a href="#contact" class="floating-cta">
+        <i class="fas fa-envelope"></i>
+    </a>
 
     <script>
         // Slideshow functionality
@@ -1239,6 +1418,74 @@ document.addEventListener('click', function(event) {
     }
 });
 
+
+
+const text = "Realizácie priemyselných podláh, leštený betón, liatie základových platní, kompletné betonárske práce a služby.";
+    const typedTextSpan = document.getElementById("typed-text");
+    const cursorSpan = document.getElementById("cursor");
+
+    let charIndex = 0;
+
+    function typeText() {
+        if (charIndex < text.length) {
+            typedTextSpan.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 40); // typing speed
+        } else {
+            setTimeout(() => {
+                typedTextSpan.textContent = "";
+                charIndex = 0;
+                typeText();
+            }, 5000); // wait before restarting loop
+        }
+    }
+
+    // Start typing on load
+    document.addEventListener("DOMContentLoaded", () => {
+        typeText();
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const counters = [
+        { id: 'counter1', target: 187 },
+        { id: 'counter2', target: 43, suffix: '%' },
+        { id: 'counter3', target: 11 }
+    ];
+
+    let hasCounted = false;
+
+    function animateCounter(el, target, duration = 1500) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const update = () => {
+            start += increment;
+            if (start < target) {
+                el.textContent = Math.floor(start);
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = target;
+            }
+        };
+        update();
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasCounted) {
+                hasCounted = true;
+                counters.forEach(counter => {
+                    const el = document.getElementById(counter.id);
+                    if (el) animateCounter(el, counter.target);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number').forEach(el => {
+        observer.observe(el);
+    });
+});
     </script>
 </body>
 </html>
