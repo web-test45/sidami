@@ -33,7 +33,7 @@
             gap: 30px;
             font-size: 14px;
             color: #ffffff;
-            text-decoration: none;
+            text-decoration: none !important;
         }
 
         .contact-info span {
@@ -997,6 +997,34 @@
                 margin-bottom: -40px;
             }
 
+            .stats {
+                padding: 50px 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .stat-card {
+                padding: 25px 15px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .stat-text {
+                font-size: 1rem;
+            }
+
+            /* Footer Text Size */
+            .footer p {
+                font-size: 0.8rem;
+                padding: 0 15px;
+            }
+
  
         }
     </style>
@@ -1129,7 +1157,7 @@
                         <p class="info-description">
                             Betón zavibrovaný ponornými vibrátormi a vyrovnaný buď ručne alebo vibračnou latou. Môže slúžiť ako základová doska pre ďalšie vrstvy podlahových konštrukcií alebo ako podkladový betón.
                         </p>
-                        <a href="#contact" class="cta-button">Objednať</a>
+                        <a href="#contact" class="btn-secondary">Objednať</a>
                     </div>
                 </div>
 
@@ -1146,7 +1174,7 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou. Úprava je vhodná pre epoxidové podlahy, pod podlahy kladené na betónovú dosku a pre podlahy pod ktoré sú kladené nároky na rovinatosť.
                         </p>
-                        <a href="#contact" class="cta-button">Objednať</a>
+                        <a href="#contact" class="btn-secondary">Objednať</a>
                     </div>
                 </div>
 
@@ -1163,7 +1191,7 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu, vysokými mechanickými odolnosťami a zvýšenými parametrami rovinnosti.
                         </p>
-                        <a href="#contact" class="cta-button">Objednať</a>
+                        <a href="#contact" class="btn-secondary">Objednať</a>
                     </div>
                 </div>
 
@@ -1171,7 +1199,7 @@
                     <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
                         <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
-                            <h3 class="info-title">Pancierová betónová doska s leštenou povrchovou úpravou
+                            <h3 class="info-title">Pancierová betónová doska
                             </h3>
                             <div class="info-subtitle">Zušľachtený povrch s tvrdými agregátmi, strojne zahladený</div>
                         </div>
@@ -1188,7 +1216,7 @@
                             <div class="highlight-item">Nenáročná údržba a jednoduché čistenie</div>
                             <div class="highlight-item">Rýchlosť realizácie v porovnaní s inými možnosťami</div>
                         </div>
-                        <a href="#contact" class="cta-button">Objednať</a>
+                        <a href="#contact" class="btn-secondary">Objednať</a>
                     </div>
                 </div>
 
@@ -1211,7 +1239,7 @@
                             <div class="highlight-item">Oolnosť voči mechanickému zaťaženiu</div>
                             <div class="highlight-item">Rýchlosť realizácie</div>
                         </div>
-                        <a href="#contact" class="cta-button">Objednať</a>
+                        <a href="#contact" class="btn-secondary">Objednať</a>
                     </div>
                 </div>
             </div>
