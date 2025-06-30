@@ -1446,25 +1446,26 @@ const text = "Realizácie priemyselných podláh, leštený betón, liatie zákl
     });
 
 
-    document.addEventListener('DOMContentLoaded', function () {
+// Counter animation
+document.addEventListener('DOMContentLoaded', function () {
     const counters = [
-        { id: 'counter1', target: 187 },
-        { id: 'counter2', target: 43, suffix: '%' },
+        { id: 'counter1', target: 387 },
+        { id: 'counter2', target: 100, suffix: '%' },
         { id: 'counter3', target: 11 }
     ];
 
     let hasCounted = false;
 
-    function animateCounter(el, target, duration = 1500) {
+    function animateCounter(el, target, duration = 1500, suffix = '') {
         let start = 0;
         const increment = target / (duration / 16);
         const update = () => {
             start += increment;
             if (start < target) {
-                el.textContent = Math.floor(start);
+                el.textContent = Math.floor(start) + suffix;
                 requestAnimationFrame(update);
             } else {
-                el.textContent = target;
+                el.textContent = target + suffix;
             }
         };
         update();
@@ -1476,7 +1477,7 @@ const text = "Realizácie priemyselných podláh, leštený betón, liatie zákl
                 hasCounted = true;
                 counters.forEach(counter => {
                     const el = document.getElementById(counter.id);
-                    if (el) animateCounter(el, counter.target);
+                    if (el) animateCounter(el, counter.target, 1500, counter.suffix || '');
                 });
             }
         });
