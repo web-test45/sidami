@@ -27,14 +27,18 @@
             align-items: center;
             padding: 0 20px;
         }
-
         .contact-info {
             display: flex;
             gap: 30px;
             font-size: 14px;
             color: #ffffff;
-            text-decoration: none;
+            text-decoration: none !important;
         }
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none !important;
+        }
+
 
         .contact-info span {
             display: flex;
@@ -486,48 +490,26 @@
         }
 
         .btn-primary {
-            background: #4cb1eb;
-            color: #ffffff;
-            padding: 15px 30px;
-            border: 2px solid rgba(108, 176, 203, 0.696);
-            border: none;
+            display: inline-block;
+            background: linear-gradient(135deg, #4cb1eb, #191756);
+            color: white;
+            padding: 12px 25px;
             border-radius: 50px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
-        }
-
-        .btn-primary:hover {
-            background: #191756;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-primary2 {
-            background: #4cb1eb;
-            color: #ffffff;
-            padding: 15px 30px;
+            transition: all 0.3s ease;
             border: none;
-            border-radius: 50px;
-            border: 2px solid rgba(108, 176, 203, 0.696);
-            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(76, 177, 235, 0.3);
         }
 
-        .btn-primary2:hover {
-            background: #191756;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .btn-primary {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(76, 177, 235, 0.4);
+            background: linear-gradient(135deg, #191756, #4cb1eb);
         }
+
 
         /* Contact Section */
         .contact {
@@ -783,6 +765,7 @@
             .info-card {
                 margin: 0 10px;
                 width: 100%;
+        
             }
 
             .info-header {
@@ -946,10 +929,10 @@
             <div class="info-grid">
                 <div class="info-card fade-in-up">
                     <div class="info-header" onclick="toggleInfoCard(this)">
-                        <div class="info-icon">🏗️</div>
+                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
                             <h3 class="info-title">Podkladová betónová doska</h3>
-                            <div class="info-subtitle">Základná konštrukcia</div>
+                            <div class="info-subtitle">so zavibrovaným povrchom</div>
                         </div>
                         <div class="triangle-indicator"></div>
                     </div>
@@ -957,20 +940,15 @@
                         <p class="info-description">
                             Betón zavibrovaný ponornými vibrátormi a vyrovnaný buď ručne alebo vibračnou latou. Môže slúžiť ako základová doska pre ďalšie vrstvy podlahových konštrukcií alebo ako podkladový betón.
                         </p>
-                        <div class="info-highlights">
-                            <div class="highlight-item">Presné zavibrovania ponornými vibrátormi</div>
-                            <div class="highlight-item">Ručné alebo strojné vyrovnávanie</div>
-                            <div class="highlight-item">Vhodná ako základ pre ďalšie vrstvy</div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up">
                     <div class="info-header" onclick="toggleInfoCard(this)">
-                        <div class="info-icon">⚙️</div>
+                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
-                            <h3 class="info-title">Strojne zahladený povrch</h3>
-                            <div class="info-subtitle">Hladká úprava</div>
+                            <h3 class="info-title">Betónová doska</h3>
+                            <div class="info-subtitle">so strojne zahladeným povrchom</div>
                         </div>
                         <div class="triangle-indicator"></div>
                     </div>
@@ -978,20 +956,15 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou. Úprava je vhodná pre epoxidové podlahy, pod podlahy kladené na betónovú dosku a pre podlahy pod ktoré sú kladené nároky na rovinatosť.
                         </p>
-                        <div class="info-highlights">
-                            <div class="highlight-item">Vysoká odolnosť povrchu</div>
-                            <div class="highlight-item">Ideálna pre epoxidové podlahy</div>
-                            <div class="highlight-item">Vynikajúca rovinatosť</div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up">
                     <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon">🛠️</div>
+                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
-                            <h3 class="info-title">Priemyselný poter WET TO WET</h3>
-                            <div class="info-subtitle">Pokročilá technológia</div>
+                            <h3 class="info-title">Betónová doska s povrchovou úpravou</h3>
+                            <div class="info-subtitle">priemyselným poterom WET TO WET – strojne zahladeným</div>
                         </div>
                         <div class="triangle-indicator"></div>
                     </div>
@@ -999,52 +972,50 @@
                         <p class="info-description">
                             Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu, vysokými mechanickými odolnosťami a zvýšenými parametrami rovinnosti.
                         </p>
-                        <div class="info-highlights">
-                            <div class="highlight-item">Vysoká odolnosť voči obrusu</div>
-                            <div class="highlight-item">Výborné mechanické vlastnosti</div>
-                            <div class="highlight-item">Zvýšená rovinatosť povrchu</div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up">
                     <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon">💎</div>
+                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
-                            <h3 class="info-title">Vsypová podlaha</h3>
-                            <div class="info-subtitle">Práškové zmesi</div>
+                            <h3 class="info-title">Pancierová betónová doska s leštenou povrchovou úpravou
+                            </h3>
+                            <div class="info-subtitle">Zušľachtený povrch s tvrdými agregátmi, strojne zahladený</div>
                         </div>
                         <div class="triangle-indicator"></div>
                     </div>
                     <div class="info-content">
                         <p class="info-description">
-                            Povrch zušľachtený vsypom práškových zmesí sa vyznačuje vyššou odolnosťou voči obrusu a zlepšenými mechanickými vlastnosťami.
+                            Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu a zlepšenými mechanickými odolnosťami.
                         </p>
                         <div class="info-highlights">
+                            <div class="highlight-item">Odolnosť voči náročnému mechanickému zaťaženiu</div>
                             <div class="highlight-item">Vysoká životnosť</div>
-                            <div class="highlight-item">Bezprašný hladký povrch</div>
-                            <div class="highlight-item">Nenáročná údržba</div>
-                            <div class="highlight-item">Rýchla realizácia</div>
+                            <div class="highlight-item">Bezprašný hladký povrch </div>
+                            <div class="highlight-item">Nenáročná údržba a jednoduché čistenie</div>
+                            <div class="highlight-item">Rýchlosť realizácie v porovnaní s inými možnosťami</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up">
                     <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon">🚗</div>
+                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
                         <div class="info-text">
-                            <h3 class="info-title">Metličková štruktúra</h3>
-                            <div class="info-subtitle">Protišmyková úprava</div>
+                            <h3 class="info-title">Cementobetónový kryt vozovky
+                            </h3>
+                            <div class="info-subtitle">S metličkovou štruktúrou povrchu</div>
                         </div>
                         <div class="triangle-indicator"></div>
                     </div>
                     <div class="info-content">
                         <p class="info-description">
-                            Cementobetónový kryt vozovky s metličkovou štruktúrou povrchu zabezpečuje protišmykovú úpravu a vysokú odolnosť.
+                            Výhody:
                         </p>
                         <div class="info-highlights">
-                            <div class="highlight-item">Odolnosť voči zmenám teploty</div>
-                            <div class="highlight-item">Protišmyková bezpečnosť</div>
+                            <div class="highlight-item">Oddolnosť voči zmenám teploty a poveternostným vplyvom</div>
+                            <div class="highlight-item">Oolnosť voči mechanickému zaťaženiu</div>
                             <div class="highlight-item">Rýchlosť realizácie</div>
                         </div>
                     </div>
@@ -1110,7 +1081,7 @@
                         <textarea id="message" name="message" placeholder="Správa" required></textarea>
                     </div>
                     <div style="text-align: center;">
-                        <button type="submit" class="btn-primary2">Odoslať</button>
+                        <button type="submit" class="btn-primary">Odoslať</button>
                     </div>
                 </form>
             </div>
