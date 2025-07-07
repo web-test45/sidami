@@ -692,9 +692,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;    
         }
-
     
-
         .form-group {
             margin-bottom: 20px;
         }
@@ -1053,8 +1051,8 @@
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="contact-info">
-            <span><i class="fas fa-phone-alt"></i> +421 940 832 723</span>
-            <span><i class="fas fa-envelope"></i> info@elmip.sk</span>            
+            <span><i class="fas fa-phone-alt"></i> <span id="topbar-phone"></span></span>
+            <span><i class="fas fa-envelope"></i> <span id="topbar-email"></span></span>
         </div>
     </div>
 
@@ -1094,17 +1092,17 @@
         <div class="hero-container">
             <div class="slideshow-container">
                 <div class="slide active">
-                    <img src="images/1.jpg" alt="Priemyselné podlahy">
+                    <img src="images/1.jpg">
                 </div>
                 <div class="slide">
-                    <img src="images/2.jpg" alt="Leštený betón">
+                    <img src="images/2.jpg">
                 </div>
                 <div class="slide">
-                    <img src="images/3.jpg" alt="Betónové podlahy">
+                    <img src="images/3.jpg">
                 </div>
             </div>
             <div class="hero-content">
-                <h1>Priemyselné podlahy Žilina</h1>
+                <h1 id="hero-headline"></h1>
                 <p id="typed-text-container"><span id="typed-text"></span><span id="cursor">|</span></p>
 
             </div>
@@ -1134,135 +1132,18 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title fade-in-up">Naše služby</h2>
-            <p class="section-subtitle">Pôsobíme na celom Slovensku a máme viac ako 11 ročné skúsenosti s realizáciou priemyselných podláh.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>🆓 Obhliadka zdarma</h3>
-                    <p>Kontaktujte nás. Obhliadka a nacenenie je u nás vždy zdarma.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>💰 Bezkonkurenčné ceny</h3>
-                    <p>Ku každému zákazníkovi pristupujeme individuálne a garantujeme vám výhodné cenové podmienky.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>🔧 Komplexné služby</h3>
-                    <p>Ponúkame realizáciu priemyselných podláh: leštený betón, základové platne, vsypové podlahy, protišmykové metličkové úpravy. Široký výber farebných leštených podláh. Tiež rezanie a zváranie dilatácií, leštenie garáží, chodníkov, altánkov, príjazdových ciest, zváranie plechov a vinklov.
-                    </p>
-                </div>
-            </div>
+            <h2 id="services-title" class="section-title fade-in-up"></h2>
+            <p id="services-subtitle" class="section-subtitle"></p>
+            <div id="services-list" class="services-grid"></div>
         </div>
     </section>
 
-    <!-- More Info Section - REDESIGNED -->
+    <!-- More Info Section -->
     <section id="more-info" class="more-info more-info-alt">
         <div class="container">
-            <h2 class="section-title fade-in-up">Viac informácií</h2>
-            <p class="section-subtitle">Poznajte detaily o našich technológiách a riešeniach pre rôzne typy betónových podláh</p>
-            
-            <div class="info-grid">
-                <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                        <div class="info-text">
-                            <h3 class="info-title">Podkladová betónová doska</h3>
-                            <div class="info-subtitle">so zavibrovaným povrchom</div>
-                        </div>
-                        <div class="triangle-indicator"></div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            Betón zavibrovaný ponornými vibrátormi a vyrovnaný buď ručne alebo vibračnou latou. Môže slúžiť ako základová doska pre ďalšie vrstvy podlahových konštrukcií alebo ako podkladový betón.
-                        </p>
-                        <a href="#contact" class="btn-secondary">Objednať</a>
-                    </div>
-                </div>
-
-                <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                        <div class="info-text">
-                            <h3 class="info-title">Betónová doska</h3>
-                            <div class="info-subtitle">so strojne zahladeným povrchom</div>
-                        </div>
-                        <div class="triangle-indicator"></div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            Povrch je hladký a vyznačuje sa vyššou odolnosťou. Úprava je vhodná pre epoxidové podlahy, pod podlahy kladené na betónovú dosku a pre podlahy pod ktoré sú kladené nároky na rovinatosť.
-                        </p>
-                        <a href="#contact" class="btn-secondary">Objednať</a>
-                    </div>
-                </div>
-
-                <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                        <div class="info-text">
-                            <h3 class="info-title">Betónová doska s povrchovou úpravou</h3>
-                            <div class="info-subtitle">priemyselným poterom WET TO WET – strojne zahladeným</div>
-                        </div>
-                        <div class="triangle-indicator"></div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu, vysokými mechanickými odolnosťami a zvýšenými parametrami rovinnosti.
-                        </p>
-                        <a href="#contact" class="btn-secondary">Objednať</a>
-                    </div>
-                </div>
-
-                <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                        <div class="info-text">
-                            <h3 class="info-title">Pancierová betónová doska
-                            </h3>
-                            <div class="info-subtitle">Zušľachtený povrch s tvrdými agregátmi, strojne zahladený</div>
-                        </div>
-                        <div class="triangle-indicator"></div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            Povrch je hladký a vyznačuje sa vyššou odolnosťou voči obrusu a zlepšenými mechanickými odolnosťami.
-                        </p>
-                        <div class="info-highlights">
-                            <div class="highlight-item">Odolnosť voči náročnému mechanickému zaťaženiu</div>
-                            <div class="highlight-item">Vysoká životnosť</div>
-                            <div class="highlight-item">Bezprašný hladký povrch </div>
-                            <div class="highlight-item">Nenáročná údržba a jednoduché čistenie</div>
-                            <div class="highlight-item">Rýchlosť realizácie v porovnaní s inými možnosťami</div>
-                        </div>
-                        <a href="#contact" class="btn-secondary">Objednať</a>
-                    </div>
-                </div>
-
-                <div class="info-card fade-in-up">
-                    <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
-                        <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
-                        <div class="info-text">
-                            <h3 class="info-title">Cementobetónový kryt vozovky
-                            </h3>
-                            <div class="info-subtitle">S metličkovou štruktúrou povrchu</div>
-                        </div>
-                        <div class="triangle-indicator"></div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            Výhody:
-                        </p>
-                        <div class="info-highlights">
-                            <div class="highlight-item">Oddolnosť voči zmenám teploty a poveternostným vplyvom</div>
-                            <div class="highlight-item">Oolnosť voči mechanickému zaťaženiu</div>
-                            <div class="highlight-item">Rýchlosť realizácie</div>
-                        </div>
-                        <a href="#contact" class="btn-secondary">Objednať</a>
-                    </div>
-                </div>
-            </div>
+            <h2 id="moreinfo-title" class="section-title fade-in-up"></h2>
+            <p id="moreinfo-subtitle" class="section-subtitle"></p>
+            <div id="moreinfo-cards" class="info-grid"></div>
         </div>
     </section>
 
@@ -1270,25 +1151,25 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <h2 class="section-title">Naše realizácie</h2>
-            <p class="section-subtitle">Za roky našej činnosti sme zrealizovali mnoho podláh. Prinášame vám výber niektorých z nich.</p>
+            <p class="section-subtitle">Toto su len niektoré z našich realizácií.</p>
             
             <div class="instagram-grid">
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/4.jpg" alt="Realizácia 1">
                 </div>
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/5.jpg" alt="Realizácia 2">
                 </div>
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/6.jpg" alt="Realizácia 3">
                 </div>
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/7.jpg" alt="Realizácia 4">
                 </div>
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/8.jpg" alt="Realizácia 5">
                 </div>
-                <div class="insta-post" onclick="window.open('https://instagram.com/elmip', '_blank')">
+                <div class="insta-post">
                     <img src="images/9.jpg" alt="Realizácia 6">
                 </div>
             </div>
@@ -1329,28 +1210,15 @@
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section class="partners">
-        <div class="container">
-            <h2 class="partner-title">Naši partneri</h2>
-            <div class="partners-grid">
-                <img src="images/logo1.png" alt="Partner 1" class="partner-logo">
-                <img src="images/logo2.png" alt="Partner 2" class="partner-logo">
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2021 Elmip s.r.o. | Všetky práva vyhradené | Informácie o ochrane osobných údajov</p>
+            <p id="footer-text"></p>
         </div>
     </footer>
 
-    
-    <a href="#contact" class="floating-cta">
-        <i class="fas fa-envelope"></i>
-    </a>
+    <a href="#contact" class="floating-cta"><i class="fas fa-envelope"></i></a>
 
     <script>
         // Slideshow functionality
@@ -1535,6 +1403,82 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 });
+
+fetch('content.json')
+  .then(res => res.json())
+  .then(data => {
+    // Hero
+    document.getElementById('hero-headline').textContent = data.hero.headline;
+
+    // Typed text (skip: handled separately)
+    const typedTextSpan = document.getElementById("typed-text");
+    let charIndex = 0;
+    function typeText() {
+      if (charIndex < data.hero.typedText.length) {
+        typedTextSpan.textContent += data.hero.typedText.charAt(charIndex++);
+        setTimeout(typeText, 40);
+      } else {
+        setTimeout(() => {
+          typedTextSpan.textContent = "";
+          charIndex = 0;
+          typeText();
+        }, 5000);
+      }
+    }
+    typeText();
+
+    // Stats
+    data.stats.forEach((stat, index) => {
+      document.getElementById(`counter${index + 1}`).textContent = stat.value;
+      document.getElementById(`counter${index + 1}-label`).textContent = stat.label;
+    });
+
+    // Services
+    document.getElementById('services-title').textContent = data.services.title;
+    document.getElementById('services-subtitle').textContent = data.services.subtitle;
+
+    const servicesContainer = document.getElementById('services-list');
+    data.services.items.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'service-card';
+      card.innerHTML = `<h3>${item.title}</h3><p>${item.description}</p>`;
+      servicesContainer.appendChild(card);
+    });
+
+    // More Info
+    document.getElementById('moreinfo-title').textContent = data.moreInfo.title;
+    document.getElementById('moreinfo-subtitle').textContent = data.moreInfo.subtitle;
+
+    const infoContainer = document.getElementById('moreinfo-cards');
+    data.moreInfo.cards.forEach(card => {
+      const highlights = card.highlights.map(h => `<div class="highlight-item">${h}</div>`).join('');
+      const highlightSection = highlights ? `<div class="info-highlights">${highlights}</div>` : '';
+      const html = `
+        <div class="info-card fade-in-up">
+          <div class="info-header" onclick="toggleInfoCard(this.parentElement)">
+            <div class="info-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <div class="info-text">
+              <h3 class="info-title">${card.title}</h3>
+              <div class="info-subtitle">${card.subtitle}</div>
+            </div>
+            <div class="triangle-indicator"></div>
+          </div>
+          <div class="info-content">
+            <p class="info-description">${card.description}</p>
+            ${highlightSection}
+            <a href="#contact" class="btn-secondary">Objednať</a>
+          </div>
+        </div>`;
+      infoContainer.insertAdjacentHTML('beforeend', html);
+    });
+
+    // Gallery
+    document.getElementById('gallery-title').textContent = data.gallery.title;
+    document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
+
+    // Footer
+    document.getElementById('footer-text').textContent = data.footer.text;
+  });
     </script>
 </body>
 </html>
