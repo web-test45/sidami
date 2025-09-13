@@ -1,0 +1,85 @@
+{
+  "topBar": {
+    "phone": "+421 907 147 691",
+    "email": "sidami@sidami.sk"
+  },
+
+  "header": {
+    "logoText": "SIDAMI s.r.o."
+  },
+  
+  "hero": {
+    "headline": "Profesionálne upratovacie a čistiace služby v Žiline a okolí",
+    "typedText": "Dôraz na detail • spoľahlivosť • čisté a zdravé prostredie"
+  },
+
+  "services": {
+    "title": "Naše služby",
+    "subtitle": "SIDAMI s.r.o. poskytuje komplexné upratovanie pre domácnosti, firmy aj priemysel s dôrazom na kvalitu, precíznosť a spokojnosť zákazníkov.",
+    "items": [
+      {
+        "title": "🚗 Čistenie interiérov a exteriérov vozidiel",
+        "description": "Kompletné umývanie, voskovanie a tepovanie – starostlivosť o váš automobil zvonka aj zvnútra."
+      },
+      {
+        "title": "🏠 Upratovanie domácností a kancelárií",
+        "description": "Pravidelná aj jednorazová starostlivosť o byty, rodinné domy, kancelárie a spoločné priestory."
+      },
+      {
+        "title": "🧼 Hĺbkové čistenie a dezinfekcia",
+        "description": "Tepovanie kobercov a sedačiek, odstránenie silného znečistenia a dezinfekcia priestorov ozónom."
+      }
+    ]
+  },
+
+  "moreInfo": {
+    "title": "O nás",
+    "subtitle": "Spoľahlivý partner na upratovanie v regióne Žilina a okolie.",
+    "cards": [
+      {
+        "title": "SIDAMI s.r.o.",
+        "subtitle": "Profesionálny prístup a kvalita",
+        "description": "SIDAMI s.r.o. je odborníkom na poskytovanie upratovacích a čistiacich služieb v regióne Žilina a jeho okolí. Zakladáme si na spoľahlivosti, kvalite a spokojnosti zákazníkov. Máme bohaté skúsenosti s čistením interiérov a exteriérov motorových vozidiel, upratovaním domácností, kancelárií a spoločných priestorov, ako aj s priemyselným čistením parkovacích domov a garáží. Všetko robíme s dôrazom na detail a profesionálny prístup.",
+        "highlights": [
+          "Dôraz na detail",
+          "Overená spoľahlivosť",
+          "Skúsený tím"
+        ]
+      },
+      {
+        "title": "Služby pre domácnosti a firmy",
+        "subtitle": "Pravidelne aj jednorazovo",
+        "description": "Upratovanie rodinných domov a bytov, kancelárií a spoločných priestorov podľa vašich potrieb – flexibilne a efektívne.",
+        "highlights": [
+          "Byty a rodinné domy",
+          "Kancelárie a spoločné priestory",
+          "Umývanie okien a výkladov"
+        ]
+      },
+      {
+        "title": "Priemyselné čistenie",
+        "subtitle": "Parkovacie domy a garáže",
+        "description": "Profesionálne upratovanie parkovacích plôch v garážach a parkovacích domoch vrátane odstránenia silného znečistenia.",
+        "highlights": [
+          "Mechanické a chemické čistenie",
+          "Bezpečný postup práce",
+          "Dlhodobé riešenia údržby"
+        ]
+      },
+      {
+        "title": "Dezinfekcia ozónom",
+        "subtitle": "Zdravé a bezpečné prostredie",
+        "description": "Dezinfekcia priestorov a vzduchotechniky priemyselným generátorom ozónu pre maximálnu hygienu a bezpečnosť.",
+        "highlights": [
+          "Eliminácia baktérií a zápachov",
+          "Bez zvyškov chemikálií",
+          "Vhodné pre domácnosti aj firmy"
+        ]
+      }
+    ]
+  },
+
+  "footer": {
+    "text": "© 2025 SIDAMI s.r.o. | Žilina | Telefón: +421 907 147 691 | Email: sidami@sidami.sk | Informácie o ochrane osobných údajov"
+  }
+}
